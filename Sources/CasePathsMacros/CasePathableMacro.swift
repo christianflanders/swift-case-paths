@@ -65,7 +65,7 @@ extension CasePathableMacro: MemberMacro {
     let enumName = enumDecl.name.trimmed
 
     let rewriter = SelfRewriter(selfEquivalent: enumName)
-    let memberBlock = rewriter.rewrite(enumDecl.memberBlock).cast(MemberBlockSyntax.self)
+    let memberBlock = enumDecl.memberBlock
 
     let enumCaseDecls = memberBlock
       .members
