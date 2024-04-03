@@ -40,7 +40,8 @@ let package = Package(
       dependencies: [
         .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
         .product(name: "SwiftCompilerPlugin", package: "swift-syntax"),
-      ]
+      ],
+      swiftSettings: [ .unsafeFlags([ "-c", "release"])]
     ),
     .testTarget(
       name: "CasePathsMacrosTests",
